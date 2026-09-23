@@ -14,15 +14,15 @@ def main():
 
     print("--- Starting MediLens Pipeline ---")
     
-    # 1. Load Models
+   
     processor, ocr_model = load_ocr_model()
     tokenizer = load_llm()
     
-    # 2. Extract Text
+   
     extracted_text = extract_text(args.image, processor, ocr_model)
     print(f"\n[Extraction Complete]\nExtracted Text Preview: {extracted_text[:150]}...\n")
     
-    # 3. Analyze Report
+    
     explanation = analyze_report(tokenizer, extracted_text)
     print(f"[Analysis Complete]\nExplanation: {explanation}\n")
     
