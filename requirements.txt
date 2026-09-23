@@ -1,0 +1,6 @@
+qai-hub
+qai-hub-models
+torch
+torchvision
+transformers
+Pillow
