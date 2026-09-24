@@ -2,16 +2,16 @@ import customtkinter as ctk
 from tkinter import filedialog
 import threading
 
-# Import your backend logic
+
 from backend.src.ocr import load_ocr_model, extract_text
 from backend.src.llm import load_llm, analyze_report
 
-# Initialize Models (Simulated for startup)
+
 print("Loading AI Models into memory...")
 processor, ocr_model = load_ocr_model()
 tokenizer = load_llm()
 
-# Configure the Desktop Window
+
 ctk.set_appearance_mode("Dark")
 ctk.set_default_color_theme("blue")
 
@@ -19,20 +19,19 @@ class MediLensApp(ctk.CTk):
     def __init__(self):
         super().__init__()
         
-        # Window settings
+      
         self.title("MediLens - On-Device AI Medical Interpreter")
         self.geometry("800x650")
         
-        # Sun/Moon Segmented Button for Theme Toggle (Top Right Corner)
+        
         self.theme_toggle = ctk.CTkSegmentedButton(
             self, 
             values=["☀️", "🌙"], 
             command=self.toggle_mode
         )
         self.theme_toggle.pack(pady=10, padx=20, anchor="ne")
-        self.theme_toggle.set("🌙") # Starts in Dark Mode
-
-        # UI Elements
+        self.theme_toggle.set("☀️") 
+        
         self.label = ctk.CTkLabel(self, text="MediLens Medical Report Interpreter", font=("Arial", 24, "bold"))
         self.label.pack(pady=10)
         
@@ -49,7 +48,7 @@ class MediLensApp(ctk.CTk):
         self.image_path = None
 
     def toggle_mode(self, value):
-        # Shifts the entire UI based on which icon is selected
+       
         if value == "🌙":
             ctk.set_appearance_mode("Dark")
         else:
