@@ -3,7 +3,7 @@ from transformers import TrOCRProcessor, VisionEncoderDecoderModel
 
 def load_ocr_model():
     print("Loading TrOCR model...")
-    # Loading the base model for prototyping
+   
     processor = TrOCRProcessor.from_pretrained('microsoft/trocr-small-printed')
     model = VisionEncoderDecoderModel.from_pretrained('microsoft/trocr-small-printed')
     return processor, model
