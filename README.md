@@ -1,4 +1,4 @@
-# 🩺 MediLens: On-Device AI Medical Report Interpreter
+# 🩺 MediLens: On-Device AI Medical Report Interpreter__
 
 > **A privacy-first, fully offline application designed for Snapdragon-powered PCs. MediLens translates complex medical jargon from lab reports, prescriptions, and discharge summaries into plain, understandable language.**
 
